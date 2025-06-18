@@ -6,7 +6,7 @@ Projeto final individual da disciplina de Computação Científica e Análise de
   
 **AUTOR**
 - Vinícius Leoni Gonçalves - DRE: *121083446*
-- *Menção honrosa para Ian Mascaro, que fez dupla com o autor deste, no projeto final da disciplina de Algebra Linear Algorítmica, a base temática utilizada para a construção deste trabalho.*
+- *Menção honrosa para Ian Mascaro, que fez dupla com o autor deste, no ![projeto final da disciplina de Algebra Linear Algorítmica](https://github.com/ViniciusLeoniGoncalves/Poke-Projeto-ALA), a base temática utilizada para a construção deste trabalho.*
 
     
 # **BEM-VINDO, TREINADOR!**  
@@ -15,13 +15,46 @@ Aqui faremos uma análise de todos os pokémons até a 4° geração com foco em
 
 O objetivo desta ferramenta é ajudar treinadores a identificar os Pokémon cujos status base são mais semelhantes ao estilo que se quer impor contra a campeã. O cálculo leva em conta **os status base de todos os pokemons** e também **suas tipagens**, possibilitando assim, o treinador montar um time capaz de enfrentar a Cynthia imprimindo um  *estilo de jogo* e uma *vantagem de tipo* ao mesmo tempo.
 
-## **SOBRE:**
+## **Resumo do que será feito**
 
-Nessa aplicação, vamos usar **técnicas de Clusterização sobre a distribuição dos valores entre os diferentes atributos**. Quanto â **magnitude absoluta do vetor de status de cada pokemon**, vamos fazer um filtro de realidade, vamos considerar apenas os pokémons em último estágio evolutivo (os mais fortes de sua cadeia, por assim dizer), garantindo uma análise detalhada, estratégica e precisa. Confie em mim, enfrentar a Cynthia exige força, MUITA força.
+-Vamos analisar o time da cynthia, olhando monstro a monstro e vendo seus status e tipagens, mostrando ao usuário.
+    - Usarei o time da Cynthia de Pokemon Diamond/Pearl nessa análise, ele consiste em:
+        Roserade lvl 60
+        Gastrodon lvl 60
+        Spiritomb lvl 61
+        Milotic lvl 63 
+        Lucario lvl 63
+        Garchomp lvl 66
+-Depois, escolher um estilo de luta, vou escolher o estilo "Blitzkrieg" que consiste em ganhar dos monstros da cynthia na velocidade, e acertar duros golpes (Ataque basico ou especial, vai depender do que é mais efetivo no monstro dela) **COM VANTAGEM DE TIPO**, para que ela quase não tenha chances de revidar.
+***
+-Posto isso, a parte de COCADA consiste em extrair todos os pokemons até a gen4 via pokeapi, guardar os dados de: $ \begin{bmatrix} nome && sprite && tipo 1 && tipo 2 && HP (base) && Attack (base) && Defense (base) && SpAtk (base) && SpDef (base) && Speed (base) \end{bmatrix}$ nas colunas de uma matriz.
 
-## **APLICAÇÕES PRÁTICAS**  
-- **Reforçando sua jornada:** Se você perdeu um de seus companheiros ao longo da jornada por Kanto, o Gerador de encontra espécies com perfis semelhantes, permitindo que você continue batalhando sem perder a essência do seu time.  
-- **Vantagem tática em ginásios:** Substitua Pokémon com desvantagens de tipo por companheiros mais adequados, mantendo equilíbrio e competitividade nas batalhas.  
-- **Planejamento estratégico:** Ideal para montar equipes focadas em características específicas, como alta ou baixa velocidade, golpes físicos ou especiais, e até mesmo balancear sua composição geral de equipe.  
+Essa estrutura será nossa base de dados principal, uma matriz onde cada linha representa um Pokémon e cada coluna representa uma característica relevante do ponto de vista de combate 
+
+*técnicas de análise:* 
+-Primeiro fazer um PCA e reduzir os vetores Status de pokemons para 2 dimensões.
+
+-Visualização e interpretação do resultado dos PCAs (dúvida! como eu faço essa interpretação? como posso saber o que cada possivel amontoado de pokemon e a posição deles no gráfico representa?)
+
+-Com base na observação dos PCAs, realizar uma clusterização de pokemons focando no grupo blitzkrieg
+    aí já não sei conceitualmente como funciona clusterização, 
+    Dentro do cluster como posso achar um pokemon comparando com outro da cynthia que?
+        -possuem speed mais alto que o monstro dela 
+            E
+        -possuem Atk maior que Def do monstro dela
+            OU
+        -possuem SpAtk maior que SpDef do monstro dela
+        (usar a menor defesa do monstro dela como regra pra escolher entre 1 e outro)
+
+
+## **O que faremos aqui em termos técnicos é:**
+
+-extrair a matriz com os vetores de status do pokeAPI
+-Fazer PCA1 e PCA2 nela para procurar visualizar um grupo Blitzkrieg
+-clusterizar pensando em achar um grupo blitzkrieg
+-olhar os monstros da cynthia 1 a 1 e escolher, dentro do cluster blitzkrieg, o que tem mais vantagem de tipo contra ele
+
+
+
 
     
