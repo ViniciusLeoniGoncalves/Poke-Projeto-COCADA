@@ -25,7 +25,7 @@ O objetivo desta ferramenta é ajudar treinadores a identificar os Pokémon cujo
         Garchomp lvl 66
 - Depois, escolher um estilo de luta, vou escolher o estilo "Blitzkrieg" que consiste em ganhar dos monstros da cynthia na velocidade, e acertar duros golpes (Ataque basico ou especial, vai depender do que é mais efetivo no monstro dela) ****COM VANTAGEM DE TIPO****, para que ela quase não tenha chances de revidar.
 ***
-- Posto isso, a parte de COCADA consiste em extrair todos os pokemons até a gen4 via pokeapi, guardar os dados de: $ \begin{bmatrix} nome && sprite && tipo 1 && tipo 2 && HP (base) && Attack (base) && Defense (base) && SpAtk (base) && SpDef (base) && Speed (base) \end{bmatrix}$ nas colunas de uma matriz.
+- Posto isso, a parte de COCADA consiste em extrair todos os pokemons até a gen4 via pokeapi, guardar os dados de: $\begin{bmatrix} nome && sprite && tipo 1 && tipo 2 && HP (base) && Attack (base) && Defense (base) && SpAtk (base) && SpDef (base) && Speed (base) \end{bmatrix}$ nas colunas de uma matriz.
 
 Essa estrutura será nossa base de dados principal, uma matriz onde cada linha representa um Pokémon e cada coluna representa uma característica relevante do ponto de vista de combate
 
