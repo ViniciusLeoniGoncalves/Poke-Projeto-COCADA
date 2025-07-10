@@ -32,17 +32,9 @@ Essa estrutura será nossa base de dados principal, uma matriz onde cada linha r
 _*técnicas de análise:*_
 -Primeiro fazer um PCA e reduzir os vetores Status de pokemons para 2 dimensões.
 
--Visualização e interpretação do resultado dos PCAs (dúvida! como eu faço essa interpretação? como posso saber o que cada possivel amontoado de pokemon e a posição deles no gráfico representa?)
+-Visualização e interpretação do resultado dos PCAs
 
 -Com base na observação dos PCAs, realizar uma clusterização de pokemons focando no grupo blitzkrieg
-    aí já não sei conceitualmente como funciona clusterização,
-    Dentro do cluster como posso achar um pokemon comparando com outro da cynthia que?
-        -possuem speed mais alto que o monstro dela
-            E
-        -possuem Atk maior que Def do monstro dela
-            OU
-        -possuem SpAtk maior que SpDef do monstro dela
-        (usar a menor defesa do monstro dela como regra pra escolher entre 1 e outro)
 
 
 ## **O que faremos aqui em termos técnicos é:**
