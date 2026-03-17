@@ -4,7 +4,7 @@ Projeto final individual da disciplina de Computação Científica e Análise de
 
 ### **AUTOR**
 - Vinícius Leoni Gonçalves - DRE: _*121083446*_
-- Também veja o resultado do [__projeto final da disciplina de Algebra Linear Algorítmica__](___https://github.com/ViniciusLeoniGoncalves/Poke-Projeto-ALA___), a base temática utilizada para a construção deste trabalho.*_
+- Também veja o resultado do [__projeto final da disciplina de Algebra Linear Algorítmica__](___https://github.com/ViniciusLeoniGoncalves/Poke-Projeto-ALA___), a base temática utilizada para a construção deste trabalho.
 
 
 ## **BEM-VINDO, TREINADOR!**
